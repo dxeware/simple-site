@@ -1,6 +1,7 @@
 var express = require("express");
 var random = require("./random-color");
 var jokes = require("./jokes");
+var petinfo = require("./pets");
 var app = express();
 var path = require("path");
 var port = process.env.PORT || 3000;
@@ -21,4 +22,8 @@ app.get("/color", function (req, res) {
 
 app.get('/jokes', function (req, res) {
   res.json(jokes);
+});
+
+app.get('/petinfo', function (req, res) {
+  res.json(petinfo);
 });
